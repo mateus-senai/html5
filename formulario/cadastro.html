@@ -7,9 +7,17 @@
     <title>Cadastro !</title>
 
 <style>
-table {border-style: solid;border-color: red;font-size:10px;width: 50%;height: 100%;margin: auto;}
-input#cadastrar{background-color: green;"}
- 
+table{width: 80%;   border: solid 8px;border-color: red; padding-left: 80px; padding-top: 60px;padding-right: 80px;
+     padding-bottom: 60px; margin: auto;align-items: center;} 
+
+td#nome{text-align: right;padding: 10px;  size: 25%;width: 15%;}
+td#dados{padding: 10px; text-align: left;size: 25%;}
+input{width: 300px;height: 20px;}
+input#fpessoa{width: 20px; text-align: center;}
+button{size: 60%; box-shadow: 5px 5px 5px lightseagreen;}
+select{height: 30px;width: 150px;}
+input#date{width: 150px;}
+input#num{width: 150px;}
 
 </style>
 
@@ -18,83 +26,84 @@ input#cadastrar{background-color: green;"}
     <form action="">
 <table>
     <tr>
-        <td>Email*</td>
-        <td><input type="email" name="" id=""></td>
-        <td>Crie uma senha*</td>
-        <td><input type="password" name="" id=""></td>
+        <td id="nome"> Email*</td>
+        <td ><input type="email" name="" id=""></td>
+        <td id="nome">Crie uma senha*</td>
+        <td ><input type="password" name="" id=""></td>
     </tr>
     <tr>
-        <td>Repetir email</td>
-        <td><input type="email" name="" id=""></td>
-        <td>Repetir senha</td>
-        <td><input type="password" name="" id=""></td>
+        <td id="nome">Repetir email*</td>
+        <td ><input type="email" name="" id=""></td>
+        <td id="nome">Repetir senha*</td>
+        <td ><input type="password" name="" id=""></td>
     </tr>
     <tr>
-        <td colspan="2" > Dados Cadastrais</td>
-        <td></td>
-        <td colspan="2" >Endereço de Entrega</td>
+        <td id="dados" colspan="2" style="font-size: 20px; "> Dados Cadastrais</td>
+        <td id="dados" colspan="2" style="font-size: 20px;">Endereço de Entrega</td>
+        <td></td> 
         <td></td>
     </tr>
     <tr>
         <td></td>
         <td><input type="radio" name="fpessoa" id="fpessoa">Pessoa física<input type="radio" name="fpessoa" id="fpessoa">Pessoa juídica</td>
-        <td>Cep</td>
-        <td><input type="text" name="" id=""></td>
+        <td id="nome">Cep*</td>
+        <td ><input type="text" name="" id=""></td>
     </tr>
     <tr>
-        <td>Nome</td>
-        <td><input type="text" name="" id=""></td>
-        <td>Rua</td>
-        <td><input type="text" name="" id=""></td>
+        <td id="nome">Nome*</td>
+        <td ><input type="text" name="" id=""></td>
+        <td id="nome">Rua*</td>
+        <td ><input type="text" name="" id=""></td>
     </tr>
     <tr>
-        <td>sobrenome</td>
-        <td><input type="text" name="" id=""></td>
-        <td>Número</td>
+        <td id="nome">sobrenome*</td>
+        <td ><input type="text" name="" id=""></td>
+        <td id="nome">Número*</td>
         <td> <input type="text" name="" id=""></td>
     </tr>
     <tr>
-        <td>Sexo</td>
+        <td id="nome">Sexo*</td>
         <td><select name="" id="">
             <option value=""> Masculino</option>
             <option value=""> Feminino</option>
         </select></td>
         <td></td>
-        <td><input type="checkbox" name="" id=""> Sem Número</td>
+        <td><input type="checkbox" name="" id="fpessoa"> Sem Número</td>
     </tr>
     <tr>
-        <td>Cpf</td>
-        <td><input type="text" name="" id=""></td>
-        <td>Complemento</td>
-        <td><input type="text" name="" id=""></td>
-    </tr>
-    <tr>
-        <td>Telefone</td>
-        <td><input type="text" name="" id=""></td>
-        <td>Referência</td>
+        <td id="nome"> Cpf*</td>
+        <td ><input type="text" name="" id="num"></td>
+        <td id="nome">Complemento*</td>
         <td><input type="text" name="" id=""></td>
     </tr>
     <tr>
-        <td>Celular</td>
-        <td><input type="text" name="" id=""></td>
-        <td>Bairro</td>
-        <td><input type="text" name="" id=""></td>
+        <td id="nome">Telefone</td>
+        <td ><input type="text" name="" id="num"></td>
+        <td id="nome">Referência</td>
+        <td ><input type="text" name="" id=""></td>
     </tr>
     <tr>
-        <td>Nascimento</td>
-        <td><input type="date" name="" id=""></td>
-        <td>Cidade</td>
-        <td><input type="text" name="" id=""></td>
+        <td id="nome">Celular*</td>
+        <td ><input type="text" name="" id="num"></td>
+        <td id="nome">Bairro*</td>
+        <td ><input type="text" name="" id=""></td>
     </tr>
     <tr>
-        <td></td>
-        <td><input type="checkbox" name="" id="">Receber ofertas e novidades por e-mail</td>
-        <td>Estado</td>
-        <td><input type="text" name="" id=""></td>
+        <td id="nome">Nascimento*</td>
+        <td><input type="date" name="" id="date"></td>
+        <td id="nome">Cidade*</td>
+        <td ><input type="text" name="" id=""></td>
     </tr>
     <tr>
         <td></td>
-        <td ><input type="submit" value="cadastrar"id="cadastrar" ></td>
+        <td ><input type="checkbox" name="" id="fpessoa">Receber ofertas e novidades por e-mail</td>
+        <td id="nome">Estado</td>
+        <td ><input type="text" name="" id=""></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td ><button disabled="disabled" style="background-color: rgb(17, 192, 17);
+                               font-size: 15px;color: white; margin-top: 30px;">Cadastrar ></button></td>
         <td></td>
         <td></td>
     </tr>
