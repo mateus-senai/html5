@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+function trocarimagem(){
+    var elemento=document.getElementById("myimage");
+    if (elemento.src.match("luz-acesa.jpg")){
+        elemento.src="luz-apagada.jpg";
+    }
+        else{
+            elemento.src="luz-acesa.jpg";
+        }
+    
+}
+
+</script>
+
+    <p> <img id="myimage" src="luz-apagada.jpg" onclick="trocarimagem();"></p>
+    <p>clique na lâmpada para acender/apagar a lâmpada</p>
+    
+</body>
+</html>
