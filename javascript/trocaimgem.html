@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>troca de imagem</title>
+</head>
+<style>
+body{background-color: black;}
+td#cabeçalho{width:90%;}
+td#exibir{width:100%; align-items:center;padding-right:30%;}
+</style>
+
+
+<body>
+    <table style="width: 100%;">
+        <tr>
+            <td id="cabeçalho"> <p><img src="senaiflix.png" alt=""> </p> </td>
+        </tr>
+
+        <tr>
+            <td id="exibir" style="text-align: center;">
+<script>
+var cont=1;
+setInterval(trocaImagem,1000);
+
+
+function trocaImagem(){
+var elemento=document.getElementById("filme");
+
+if (cont==1){
+    elemento.src="filme1.png";
+}
+if(cont==2){
+    elemento.src="filme2.png";
+}
+if (cont==3){
+    elemento.src="filme3.png";
+    cont=0;
+}
+cont++;
+
+}
+
+</script>
+
+            </td>
+        </tr>
+        
+
+
+    </table>
+
+    <img id="filme" src="filme1.png" alt="">
+
+
+
+
+</body>
+</html>

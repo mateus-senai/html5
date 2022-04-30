@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>validação</title>
+
+    <script>
+        function validarform(){
+            var val=document.getElementById("Válido");
+            try{
+                var x=document.forms["meuForm"]["nome"].value;
+                if ( x==null || x=="") {
+                    throw "o nome deve ser preechido!";
+        
+                }
+        
+                var y=document.forms["meuForm"]["email"].value;
+                var atpos =y.indexOf("@");
+                var dotpos =y.lastIndexOf(".");
+                if(atpos <1 || dotpos < atpos +2 || dotpos +2 >=y.length){
+                    throw "Digite uym email válido";
+                }
+                return true;
+            }catch (err) {
+                val.style.color = "#ff0000";
+                val.innerHTML= "Erro: "+ err;
+                return false;
+            }//fim catch
+        }//fim function
+        
+         </script>
+        
+</head>
+ 
+<body>
+    
+<form name="meuForm" action="recebe.php" onsubmit="return validarform();"
+            method="post">
+            <p id="valido">Preencha o formulário e clique em Enviar</p>
+        Nome <input type="text" name="nome"> <br>
+        Email <input type="text" name="email"><br> <br>
+        <input type="submit" value="enviar">
+        </form>
+      
+
+
+</body>
+</html>
